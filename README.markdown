@@ -40,4 +40,4 @@ Limitations
 
 
 
-Copyright (c) 2009 Andreas Neuhaus, released under the MIT license
+_Copyright (c) 2009 Andreas Neuhaus, released under the MIT license_
