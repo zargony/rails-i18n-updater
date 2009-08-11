@@ -10,6 +10,7 @@ Install
 =======
 
     ./script/plugin install git://github.com/zargony/rails-i18n-updater.git
+    rake i18n:update
 
 This installs the rails-i18n-updater plugin into `vendor/plugins/rails-i18n-updater` and
 downloads core translations to `vendor/rails-locales`.

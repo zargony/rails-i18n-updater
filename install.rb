@@ -1,1 +1,1 @@
-# Install hook code here
+puts "Next, run rake i18n:update to download the latest core translations"
