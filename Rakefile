@@ -12,6 +12,7 @@ Jeweler::Tasks.new do |gem|
   gem.authors = ['Andreas Neuhaus']
   gem.add_dependency 'activesupport'
   gem.add_dependency 'actionpack'
+  gem.add_dependency 'rails'
   gem.has_rdoc = false
   gem.add_development_dependency 'mocha'
 end
