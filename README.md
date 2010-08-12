@@ -20,6 +20,10 @@ If you previously used the rails-i18n-updater plugin, you should remove it after
 switching to the gem by simply deleting the directory `vendor/plugins/rails-i18n-updater`
 in your application.
 
+To add the i18n:update task to your application, add the following to your `Rakefile`:
+
+    require 'rails_i18n_updater/tasks'
+
 Use the i18n:update task to initially download core translations:
 
     $ rake i18n:update
