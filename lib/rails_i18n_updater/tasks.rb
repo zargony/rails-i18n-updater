@@ -1,7 +1,7 @@
 namespace :i18n do
   desc 'Update (download) Rails core translations'
   task :update do
-    require File.join(File.dirname(__FILE__), '..', 'lib', 'rails_i18n_updater', 'config')
+    require 'rails_i18n_updater/config'
     temp_path = "#{RailsI18nUpdater::Config.local_path}.tmp"
     sh <<-EOC
       rm -rf #{temp_path} && \
