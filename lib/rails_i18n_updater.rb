@@ -1,3 +1,4 @@
+require 'rails/version'
 require 'rails_i18n_updater/config'
 
 module RailsI18nUpdater
@@ -14,7 +15,11 @@ end
 
 # Prepare new load path in after_initialize as the I18n.load_path might
 # be modified in Rails initializers.
-Rails.configuration.after_initialize do
-  RailsI18nUpdater.prepare_i18n_load_path
-end
+case Rails::VERSION::MAJOR
+  when 2
+    Rails.configuration.after_initialize do
+      RailsI18nUpdater.prepare_i18n_load_path
+    end
+  else
+    STDERR.puts "WARNING: Rails I18n Updater not loading. Unsupported Rails version #{Rails::VERSION::STRING}"
 end
