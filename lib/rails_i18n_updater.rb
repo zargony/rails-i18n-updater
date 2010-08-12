@@ -14,10 +14,7 @@ end
 
 # Prepare new load path in after_initialize as the I18n.load_path might
 # be modified in Rails initializers.
-class Rails::Initializer
-  def after_initialize_with_rails_locales
-    after_initialize_without_rails_locales
-    RailsI18nUpdater.prepare_i18n_load_path
-  end
-  alias_method_chain :after_initialize, :rails_locales
+Rails.configuration.after_initialize do
+  RailsI18nUpdater.prepare_i18n_load_path
+end
 end
