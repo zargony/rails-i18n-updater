@@ -13,20 +13,17 @@ following to you `Gemfile`:
 
     gem 'rails-i18n-updater'
 
+Use the i18n:update task to initially download core translations:
+
+    $ rake i18n:update
+
 If you're using Rails 2.x without Bundler, you need to add `config.gem 'rails-i18n-updater'`
-to `config/environments.rb` instead.
+to `config/environments.rb`. Also, you need to manually include the i18n:update task by
+adding `require 'rails_i18n_updater/tasks'` to your application's `Rakefile`.
 
 If you previously used the rails-i18n-updater plugin, you should remove it after
 switching to the gem by simply deleting the directory `vendor/plugins/rails-i18n-updater`
 in your application.
-
-To add the i18n:update task to your application, add the following to your `Rakefile`:
-
-    require 'rails_i18n_updater/tasks'
-
-Use the i18n:update task to initially download core translations:
-
-    $ rake i18n:update
 
 Update
 ------
